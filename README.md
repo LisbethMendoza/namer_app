@@ -35,6 +35,6 @@ samples, guidance on mobile development, and a full API reference.
  - Se crearon marcas para los commit "git tag v1 c1"
  - Se describio un commit con "git describe" te ayuda a saber donde estabas si te moviste hacia atras o hacia adelante.
 
-
+![Imagen de WhatsApp 2024-10-30 a las 17 30 34_85f8b998](https://github.com/user-attachments/assets/7366d986-926f-47cf-b0e9-c6eb141a4340)
 
 
