@@ -63,6 +63,9 @@ class _MyHomePageState extends State<MyHomePage> {
       case 1:
         page = FavoritesPage();
         break;
+        case 2:
+        page = SettingsPage();
+        break;
       default:
         throw UnimplementedError('no widget for $selectedIndex');
     }
@@ -75,14 +78,22 @@ class _MyHomePageState extends State<MyHomePage> {
               child: NavigationRail(
                 extended: constraints.maxWidth >= 600,
                 destinations: [
+
                   NavigationRailDestination(
                     icon: Icon(Icons.home),
                     label: Text('Home'),
                   ),
+
                   NavigationRailDestination(
                     icon: Icon(Icons.favorite),
                     label: Text('Favorites'),
                   ),
+
+                  NavigationRailDestination(
+                    icon: Icon(Icons.settings),
+                    label: Text('Setting'),
+                  ),
+
                 ],
                 selectedIndex: selectedIndex,
                 onDestinationSelected: (value) {
@@ -127,6 +138,8 @@ class GeneratorPage extends StatelessWidget {
           Row(
             mainAxisSize: MainAxisSize.min,
             children: [
+
+              
               ElevatedButton.icon(
                 onPressed: () {
                   appState.toggleFavorite();
@@ -134,6 +147,7 @@ class GeneratorPage extends StatelessWidget {
                 icon: Icon(icon),
                 label: Text('Like'),
               ),
+
               SizedBox(width: 10),
               ElevatedButton(
                 onPressed: () {
@@ -202,6 +216,39 @@ class FavoritesPage extends StatelessWidget {
             title: Text(pair.asLowerCase),
           ),
       ],
+    );
+  }
+}
+
+
+class SettingsPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 224, 20, 54),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Probando otra página',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+              ),
+            ),
+            SizedBox(height: 20), 
+            ElevatedButton(
+              onPressed: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(content: Text('Estás en configuración')),
+                );
+              },
+              child: Text('Precioana este Boton'),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
