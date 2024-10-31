@@ -26,5 +26,15 @@ samples, guidance on mobile development, and a full API reference.
 
 ### :sparkles: Moviendo el trabajo por aqui :sparkles:
 - Nivel 1, Copiar commits sobre la ubicacion de HEAD "git cherry-pick <commit 1>" 
-- Nivel 2, "pink"-> no poner esto es ignorar la copia de un commit. Para copiar y solo evitar 1 commit debes escribir "git rebase -i HEAD~<num>" 
+- Nivel 2, "pink"-> no poner esto es ignorar la copia de un commit. Para copiar y solo evitar 1 commit debes escribir "git rebase -i HEAD~<num>"
+
+- ### :sparkles: Un poco de todo :sparkles:
+ - En los 5 niveles te pedia copiar y organizar los commits de siertas maneras usando los comandos: 
+ - Crear una copia y que introduca una rama. "git rebase -i main y git rebase bugfix main"
+ - Organizar los comando con "git rebase -i". Para hacer notorio los cambios "git commit --amend" 
+ - Se crearon marcas para los commit "git tag v1 c1"
+ - Se describio un commit con "git describe" te ayuda a saber donde estabas si te moviste hacia atras o hacia adelante.
+
+![Imagen de WhatsApp 2024-10-30 a las 17 30 34_85f8b998](https://github.com/user-attachments/assets/7366d986-926f-47cf-b0e9-c6eb141a4340)
+
 
